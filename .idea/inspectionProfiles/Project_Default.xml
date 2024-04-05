@@ -1,0 +1,25 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="58" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="events.meetings.models.Timetable.objects" />
+          <option value="events.meetings.models.Meeting.objects" />
+          <option value="events.meetings.models.Profile.objects" />
+          <option value="events.meetings.models.Place.objects" />
+          <option value="events.meetings.models.Tags.objects" />
+          <option value="events.meetings.models.Chat.objects" />
+          <option value="events.meetings.models.Message.objects" />
+          <option value="events.meetings.models.Voting.objects" />
+          <option value="events.meetings.models.Field.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
