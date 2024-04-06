@@ -1,6 +1,10 @@
 from django.db import models
 
 
+class VoidModel(models.Model):
+    ...
+
+
 class Tag(models.Model):
     name = models.CharField(max_length=25, help_text='Введите название тега', verbose_name='Название тега')
 

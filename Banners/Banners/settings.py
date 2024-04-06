@@ -1,5 +1,7 @@
+import os
 from pathlib import Path
 
+import django.core.cache.backends.db
 import rest_framework.authentication
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -36,6 +38,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
+    'drf_yasg',
 
     'banners_api',
 ]
@@ -135,3 +138,12 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ]
 }
+
+CACHES = {
+    'default': {
+
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, 'banners_cache'),
+    }
+}
+
