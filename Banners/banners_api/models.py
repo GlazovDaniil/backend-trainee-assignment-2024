@@ -1,10 +1,6 @@
 from django.db import models
 
 
-class VoidModel(models.Model):
-    ...
-
-
 class Tag(models.Model):
     name = models.CharField(max_length=25, help_text='Введите название тега', verbose_name='Название тега')
 
@@ -21,8 +17,8 @@ class Feature(models.Model):
 
 class Banner(models.Model):
     feature_id = models.ForeignKey(Feature, on_delete=models.CASCADE, related_name='feature',
-                                   help_text='Введите название бане',
-                                   verbose_name='Название')
+                                   help_text='Выберите фичу',
+                                   verbose_name='Фича')
     tag_ids = models.ManyToManyField(Tag, related_name='tags',
                                      help_text='Выберите теги пользователя',
                                      verbose_name='Тэг пользователя')

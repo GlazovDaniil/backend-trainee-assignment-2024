@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'banners_db',
         'USER': 'banners',
         'PASSWORD': 'bulbasumkin',
-        'HOST': 'localhost',
+        'HOST': 'postgres',  # 'localhost'
         'PORT': '5432',
     }
 }
@@ -147,3 +147,4 @@ CACHES = {
     }
 }
 
+SITE_ID = 1

@@ -1,11 +1,9 @@
 from django.urls import path
-from django.views.decorators.cache import cache_page
 from .views import (logout_view, accounts_profile_redirect, UserBannerAPIView, BannerAPIView, BannerDetailAPIView,
-                    TagCreateAPIView, FeatureCreateAPIView, VoidAPI)
+                    TagCreateAPIView, FeatureCreateAPIView)
 
 
 urlpatterns = [
-    path('void_create/', VoidAPI.as_view()),
     path('tag/create/', TagCreateAPIView.as_view()),
     path('feature/create/', FeatureCreateAPIView.as_view()),
 
